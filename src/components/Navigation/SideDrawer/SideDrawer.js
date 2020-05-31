@@ -9,11 +9,15 @@ import Combiner from '../../../hoc/Auxillary';
 
 
 const sideDrawer = (props) => {
-  //add styles for CSS here
+  let attachedClasses = [classes.SideDrawer, classes.Close];
+  if (props.open) {
+    attachedClasses = [classes.SideDrawer, classes.Open];
+  }
+
   return (
     <Combiner>
-    <Backdrop show />
-    <div className={classes.SideDrawer}>
+    <Backdrop show={props.open} clicked={props.closed}/>
+    <div className={attachedClasses.join(' ')}>
       <div className={classes.Logo}>
         <Logo />
       </div>
