@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Button from '../../UI/Button/Button';
-import Combiner from '../../../hoc/Auxillary';
+import Combine from '../../../hoc/Combine/Combine';
 
 class OrderSummary extends Component {
   componentWillUpdate() {
@@ -18,7 +18,7 @@ class OrderSummary extends Component {
         );
       });
     return (
-      <Combiner>
+      <Combine>
         <h3>Your Order</h3>
         <p>A delicious burger with the following ingredients:</p>
         <ul>
@@ -28,7 +28,7 @@ class OrderSummary extends Component {
         <p>Continue to checkout?</p>
         <Button btnType="Danger" clicked={this.props.purchaseCancelled}>CANCEL</Button>
         <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
-      </Combiner>
+      </Combine>
     );
 
   }
