@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Backdrop from '../Backdrop/Backdrop';
 import classes from './Modal.css';
-import Combiner from '../../../hoc/Auxillary';
+import Combiner from '../../../hoc/Combine/Combine';
 
 class Modal extends Component {
 
